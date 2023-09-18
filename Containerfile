@@ -1,6 +1,6 @@
-FROM archlinux:base-20230723.0.166908
+FROM archlinux:latest
 
-RUN pacman --noconfirm -Sy openssh diffutils rsync
+RUN pacman --noconfirm -Syu openssh diffutils rsync
 
 RUN curl -s -L -o /root/unison.tar.gz https://github.com/bcpierce00/unison/releases/download/v2.53.3/unison-2.53.3+ocaml4.08-ubuntu-x86_64.tar.gz && \
     tar -xf /root/unison.tar.gz -C /usr/local/ && \
